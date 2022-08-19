@@ -14,7 +14,7 @@ if (localTime) {
 // player.on('timeupdate', throttle(onTimeUpdate, 1000))
 player.on('timeupdate', throttle(function (data) {
     localStorage.setItem(TIME_KEY, data.seconds);
-  }, 1000));
+  }, 500));
 function onTimeUpdate(e) { 
     const time = e.seconds;
     localStorage.setItem(TIME_KEY, time);
